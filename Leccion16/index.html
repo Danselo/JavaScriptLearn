@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JavaScript</title>
+    <!-- <style>
+        .blue{
+            color: blue;
+        }
+    </style> -->
+</head>
+    <!-- onload is ejecuted when the web page finishes loading -->
+
+<body > 
+    <!-- <h1 id="header" class="blue">Example DOM WITH JavaScript</h1>
+    <p id="paragraph1" class="blue">HII!!</p>
+    <p id="paragraph2"class="blue">Other Paragraph</p>
+    <script>
+        // let header = document.getElementById("header")
+        // let paragraph = document.getElementById("paragraph1");
+        // console.log('Value header : '+header);
+        //template literal 
+        // console.log(`Value header : ${header.innerHTML}`);
+        // console.log('Value paragraph : '+paragraph);
+        // console.log(`Value paragraph : ${paragraph.innerHTML}`);
+        //modify content
+        // paragraph.innerHTML = 'New value for paragraph'
+        // header.innerHTML = 'New value for header'
+        
+        //OTHER FORM FOR RETRIEVE 
+        //getelementsByTagName
+        let paragraphs = document.getElementsByTagName('p') //search all elements with the tag p 
+        console.log(`No. Paragraphs : ${paragraphs.length}`);
+        for (let i=0; i< paragraphs.length; i++) {
+            console.log(` ${i} -  ${paragraphs[i].innerHTML}` );
+        }
+        //getElementsByClassName 
+        //  let elementsClass = document.getElementsByClassName('blue');
+        //querySelectorAll
+          let elementsClass = document.querySelectorAll('p.blue');
+
+         console.log(`No. elements for class : ${elementsClass.length}`);
+            for (let element of elementsClass){
+                console.log(` ${element.innerHTML}`);
+            }
+            //other methods for styles css  (querySelectorAll) this specifies the element html to be retrieved along with the class
+             
+    </script> -->
+<!-- 
+        <form  id="form">
+            <label for="">Name</label>
+            <input type="text" value="Juan" name="name"/>
+            <label for="">LastName</label>
+            <input type="text" name="lastname" id="" value="Perez">
+        </form>
+        <button onclick="showsValues()">Show </button>
+        <div id="values"></div>
+        <script>
+            function showsValues(){
+                let form = document.forms['form']; //access the form 
+                let text = '';
+                // for(let element of form){
+                //     text += element.value + '<br/>'
+                // }
+                //acces for separate
+                let  name = form['name'];
+                let lastname = form['lastname'];
+                text = name.value + '<br/>' + lastname.value;
+                document.getElementById('values').innerHTML = text;
+            }
+        </script> -->
+        
+        <h1 id="title" >Title</h1>
+        <!-- <button onclick="change()">Change </button> -->
+        <br>
+        <!-- <label for="">Name</label>
+        <input type="text" onchange="convert(this)"> -->
+        <!-- <img src="./img/javascript.png" alt="" id="image"> -->
+        <!-- <div id="show"></div> -->
+        <form action="" id="form">
+            <label for="">Name</label>
+            <br>
+    
+            <!-- <input type="text" onfocus="changeBackground(this)" onblur="returnColor(this)"> -->
+            <input type="text" id="name">
+    
+            <br>
+    
+            <label for="">lastname</label>
+            <br>
+            <input type="text" id="lastname">
+        </form>
+      
+
+        <!-- <input type="text" name="" id="" onfocus="changeBackground(this)" onblur="returnColor(this)"> -->
+        <script>
+            // document.write('Hola desde javascript')
+            // function changeTitle(){
+            //     document.getElementById('title').innerHTML += '<br/> New Title';
+            // }
+            // function change(){
+            //     document.getElementById('image') .src = './img/html5.png'
+            // }
+            // function change(){
+            //     //change the color of the title 
+            //     document.getElementById('title').style.color = 'orange';
+            // }
+            // function changeText(title){
+            //     console.log(title.innerHTML);
+            //     title.innerHTML = 'Change the title';
+            // }
+            // document.getElementById('title').onclick = changeText;
+            // function changeText(){
+            //     document.getElementById('show').innerHTML = 'New Content';
+            // } 
+            // function enter(){
+            //     alert('Entering');
+            //     //review cookies
+            //     let text = '';
+            //     if(navigator.cookieEnabled){
+            //         text = 'The cookies is enabled';
+            //     }else{
+            //         text = 'The cookies is disabled';
+            //     }
+            //     document.getElementById('show').innerHTML = text;
+            // }
+                //alter the text
+
+                // function convert(nameInput){
+                //     nameInput.value = nameInput.value.toUpperCase();
+                // }   
+                    //hover with javascript (onmouseover="red(this)" onmouseout="blue(this)")
+                    // function red(){
+                    //     title.style.color = 'red';
+                    // }
+                    // function blue(){
+                    //     title.style.color = 'blue';
+                    // }
+                    // //Event onmousedown, onmouseup and onclick
+                    // function green(){
+                    //     title.style.color = 'green';
+                    //     console.log('onmousedown cambio a green');
+                    // }
+                    // function yellow(){
+                    //     title.style.color = 'yellow';
+                    //     console.log('onmouseup cambio a yellow');
+
+                    // }
+                    // function brown(){
+                    //     title.style.color = 'brown';
+                    //     console.log('onclick cambio a brown');
+
+                    // }
+                    // function changeBackground(elementInput){
+                    //     elementInput.style.background = 'yellow';
+                    // }
+                    // function returnColor(elementInput){
+                    //     elementInput.style.background = '#fff'
+                    // }
+
+                    //ADD EVENT LISTENER
+                    //normal function with event listener
+                    // document.getElementById('name').addEventListener('focus',change); //not using on just name of event (focus,click)
+                    // document.getElementById('name').addEventListener('blur',returnColor); 
+                    // document.getElementById('lastname').addEventListener('focus',change); 
+                    // document.getElementById('lastname').addEventListener('blur',returnColor); 
+
+                        //this is the hover with javascript and addvent listeners
+                    // function change(event){
+                    //    let component = event.target //retreive the component from the input
+                    //    component.style.background = 'yellow';
+                    // }   
+                    // function returnColor(event){
+                    //     let component = event.target;
+                    //     component.style.background = '#fff';
+                    // }
+                    // // arrow function with the addEventListener
+                    // //note: this code is not reusable 
+                    // document.getElementById('name').addEventListener('focus',(event)=>{
+                    //     let component = event.target;
+                    //    component.style.background = 'pink';
+                    // }); //not using on just name of event (focus,click)
+                    // document.getElementById('name').addEventListener('blur',(event) => {
+                    //     let component = event.target;
+                    //     component.style.background = '';
+                    // }); 
+                    // document.getElementById('lastname').addEventListener('focus',(event)=>{
+                    //     let component = event.target;
+                    //    component.style.background = 'pink';
+                    // }); //not using on just name of event (focus,click)
+                    // document.getElementById('lastname').addEventListener('blur',(event) => {
+                    //     let component = event.target;
+                    //     component.style.background = '';
+                    // }); 
+
+                    //------------using all elements within of the form --------------
+                    const form = document.getElementById('form');
+                    
+                    form.addEventListener('focus',(event)=>{
+                        event.target.style.background = 'purple';
+                    },true)
+                    form.addEventListener('blur',(event)=>{
+                        event.target.style.background = '';
+
+                        
+                    },true)
+                    //note: true indicates that all that we apply for the form, be done for the internal elements 
+
+
+        </script>
+</body>
+</html>
